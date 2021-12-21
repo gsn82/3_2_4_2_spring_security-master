@@ -1,0 +1,22 @@
+для добавления ролей в базе
+INSERT INTO `roles` (`name`) VALUES ('USER');
+INSERT INTO `roles` (`name`) VALUES ('ADMIN');
+
+добавим админа
+INSERT INTO `users` (`email`, `first_name`, `last_name`, `age`, `password`) VALUES ('admin@gmail.com', 'admin', 'admin', 99, '$2a$10$IqTJTjn39IU5.7sSCDQxzu3xug6z/LPU6IF0azE/8CkHCwYEnwBX.');
+добавим роли для админа
+INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES (1, 2);
+
+
+
+
+INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES (2, 2);
+INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES (3, 2);
+
+select * from users_roles;
+
+
+select * from users;
+
+
+select * from roles;
